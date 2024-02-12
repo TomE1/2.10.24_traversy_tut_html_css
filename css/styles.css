@@ -13,16 +13,16 @@ body {
 
 /* cool borders */
 :root {
-  --borderRed: 2px solid red;
+  --borderRed: 6px solid red;
   --borderLime: 2px solid lime;
   --borderPink: 2px solid pink;
   --borderViolet: 2px solid violet;
-  --borderBlue: 2px solid blue;
+  --borderBlue: 6px solid blue;
   --borderBlack: 4px solid black;
   --borderOrange: 2px solid orange;
   --borderIndigo: 2px solid indigo;
   --borderWhite: 2px solid white;
-  --borderYellow: 2px solid yellow;
+  --borderYellow: 6px solid yellow;
   --borderPurple: 2px solid purple;
   --borderBrown: 2px solid brown;
   --borderGray: 2px solid gray;
@@ -234,9 +234,56 @@ img {
   text-align: center;
 }
 
-.faq ul.faq-menu li.active{
+.faq ul.faq-menu li.active {
   background: var(--primary-color);
   color: #fff;
+}
+
+/* footer */
+
+.footer {
+  padding: 40px 0;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+}
+
+.footer ul li {
+  line-height: 2.5;
+}
+
+.footer a {
+  color: #ccc;
+}
+
+.footer a:hover {
+  color: #4891ff;
+}
+
+.footer i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .card {
+  margin: 20px 30px 30px 0;
+}
+
+.footer input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px 0;
 }
 
 /* Utility Classes */
@@ -354,4 +401,26 @@ img {
 .bg-black {
   background: #000;
   color: #fff;
+}
+
+/* media queries */
+
+@media (max-width: 960px) {
+  body {
+    border: var(--borderYellow);
+  }
+}
+
+@media (max-width: 670px) {
+  body {
+    border: var(--borderRed);
+  }
+  .navbar .main-menu {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    border: var(--borderBlue);
+  }
 }
